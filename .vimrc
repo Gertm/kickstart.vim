@@ -198,7 +198,7 @@ nnoremap <expr> <silent> j v:count == 0 ? 'gj' : 'j'
 
 " [[ Configure plugins ]]
 " Set colorscheme
-colorscheme onedark
+colorscheme onehalflight
 " Characters to render for indentation guide
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
