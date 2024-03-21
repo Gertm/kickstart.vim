@@ -24,7 +24,8 @@
 "  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 let mapleader=' '
 let maplocalleader = ' '
-
+set relativenumber
+set rnu
 
 " Install package manager
 " https://github.com/junegunn/vim-plug/
@@ -61,9 +62,6 @@ Plug 'liuchengxu/vim-which-key'
 " Adds git related signs to the gutter
 Plug 'airblade/vim-gitgutter'
 
-" Theme inspired by Atom
-Plug 'joshdick/onedark.vim'
-
 " Set airline as statusline
 Plug 'vim-airline/vim-airline'
 
@@ -77,8 +75,12 @@ Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 call plug#end()
 
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
 " [[ Setting sensible default options ]]
 " These are some of the settings enabled by default in Neovim.
