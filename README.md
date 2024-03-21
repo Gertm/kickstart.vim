@@ -29,13 +29,13 @@ This is an easy way to manage your Vimrc with Git as well as other configuration
 1. clone the repository in your home directory
     ```bash
     # Replace `theopn/kickstart.vim` with `your-username/forked-repository-name` if you made a fork
-    git clone https://github.com/theopn/kickstart.vim.git ~/kickstart.vim
+    git clone https://github.com/theopn/kickstart.vim.git ~/src/kickstart.vim
     ```
-2. Create a symbolic link between `~/kickstart.vim/.vimrc` and `~/.vimrc`
+2. Create a symbolic link between `~/src/kickstart.vim/.vimrc` and `~/.vimrc`
     ```bash
     # Make sure you have backed up existing .vimrc
     # The force flag (-f) will overwrite the existing file
-    ln -sf ~/kickstart.vim/.vimrc ~/.vimrc
+    ln -sf ~/src/kickstart.vim/.vimrc ~/.vimrc
     ```
 3. Now whenever you open `~/.vimrc`, you are opening `~/kickstart.vim/.vimrc`.
     Since `kickstart.vim` is a Git repository, you can easily manage changes you made to your `.vimrc` across multiple devices.
