@@ -1,24 +1,3 @@
-"
-" =====================================================================
-" =========================== KICKSTART.VIM ===========================
-" =====================================================================
-"
-" Kickstart.vim is a template for *your* Vim configuration.
-" You should read every line of the code and understand what it is doing.
-" Afterwards, you can configure and tinker with vimrc.
-"
-" Vim's built-in help, triggered by `:help X` is a very helpful guide for any
-" of the Vim's built-in features as well as plugins.
-"
-" Kickstart.vim is heavily inspired by Kickstart.nvim.
-" If you are using Neovim, consider using Kickstart.nvim instead:
-" https://github.com/nvim-lua/kickstart.nvim
-"
-" Feel free to delete this comment once you feel that this config is *yours*.
-" I hope you enjoy your Vim journey!
-" - Theo
-"
-
 " Set <space> as the leader key
 " See `:help mapleader`
 "  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
@@ -76,6 +55,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 call plug#end()
 
