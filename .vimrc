@@ -57,6 +57,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
+Plug 'tpope/vim-surround'
+
+
 call plug#end()
 
 let g:go_def_mode='gopls'
@@ -299,7 +302,13 @@ augroup lsp_install
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
 
+" Adding my own stuff below
 au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
+
+imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
+
+
 
 " The line beneath this is called `modeline`. See `:help modeline`
 " vim: ts=2 sts=2 sw=2 et
