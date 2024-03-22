@@ -130,7 +130,11 @@ set mouse=a
 " Sync clipboard between OS and Neovim.
 "  Remove this option if you want your OS clipboard to remain independent.
 "  See `:help 'clipboard'`
-set clipboard=unnamedplus
+if has('unnamedplus')
+  set clipboard^=unnamed
+  set clipboard^=unnamedplus
+endif
+" set clipboard=unnamedplus
 
 " Enable break indent
 set breakindent
@@ -294,6 +298,8 @@ augroup lsp_install
   " call s:on_lsp_buffer_enabled only for languages that has the server registered.
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
+au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 
 " The line beneath this is called `modeline`. See `:help modeline`
 " vim: ts=2 sts=2 sw=2 et
