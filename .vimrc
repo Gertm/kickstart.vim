@@ -17,10 +17,6 @@ endif
 " NOTE: Here is where you install your plugins.
 call plug#begin()
 
-" Git related plugins
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
-
 " Detect tabstop and shiftwidth automatically
 Plug 'tpope/vim-sleuth'
 
