@@ -308,7 +308,9 @@ au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
 
-
+set nobackup
+set nowritebackup
+set noswapfile
 
 " The line beneath this is called `modeline`. See `:help modeline`
 " vim: ts=2 sts=2 sw=2 et
