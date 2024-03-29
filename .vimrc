@@ -18,7 +18,7 @@ endif
 call plug#begin()
 
 " Detect tabstop and shiftwidth automatically
-Plug 'tpope/vim-sleuth'
+" Plug 'tpope/vim-sleuth'
 
 " NOTE: This is where your plugins related to LSP can be installed.
 "  The configuration is done below. Search for lsp to find it below.
